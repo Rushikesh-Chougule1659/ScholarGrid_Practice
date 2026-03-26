@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Courses - Premium Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="premium-nav">
+        <div class="logo">
+            <span class="nav-icon">🎓</span> EduPro
+        </div>
+        <a href="index.html"><span class="nav-icon">🏠</span> Home</a>
+        <a href="main_course.html" class="active"><span class="nav-icon">📚</span> Courses</a>
+        <a href="contact_us.html"><span class="nav-icon">📬</span> Contact Us</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">🌙</button>
+    </nav>
+    
+    <main class="page-content">
+        <div class="hero-text">
+            <h1>Elevate Your Journey</h1>
+            <p>Select a learning path tailored to your ambitions. Master the complexities with our premium structured courses.</p>
+        </div>
+
+        <div class="course-list">
+            <!-- NPTEL Course -->
+            <div class="course-card premium-card">
+                <div class="card-icon nptel-icon">🔬</div>
+                <h3>NPTEL Courses</h3>
+                <p>Enhance your engineering and academic skills with deep, comprehensive subjects curated by top tier institutions.</p>
+                <div class="card-footer">
+                    <span class="badge">Beginner to Pro</span>
+                    <a href="l2_nptel.html" class="btn-primary">Explore NPTEL</a>
+                </div>
+            </div>
+
+            <!-- GATE Course -->
+            <div class="course-card premium-card">
+                <div class="card-icon gate-icon">🚀</div>
+                <h3>GATE Preparation</h3>
+                <p>Crack the Graduate Aptitude Test in Engineering with specialized technical training and mock series.</p>
+                <div class="card-footer">
+                    <span class="badge">Advanced</span>
+                    <a href="coming_soon.html" class="btn-primary">Start Prep</a>
+                </div>
+            </div>
+
+            <!-- UPSC Course -->
+            <div class="course-card premium-card">
+                <div class="card-icon upsc-icon">🏛️</div>
+                <h3>UPSC Services</h3>
+                <p>Prepare for one of the toughest administrative examinations with structured syllabus coverage and strategy.</p>
+                <div class="card-footer">
+                    <span class="badge">Expert</span>
+                    <a href="coming_soon.html" class="btn-primary">View Subjects</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--shadow); color: var(--subtext-color); font-size: 0.9rem;">
+            Open educational initiative by Rushikesh Chougule | Walchand Institude of Techanology, Solapur
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

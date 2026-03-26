@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Practice</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="l3_quiz.css">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="main_course.html">Courses</a>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+    
+    <!-- Start Screen -->
+    <section id="start-screen" class="quiz-section">
+        <h1 id="quiz-title">Quiz Practice</h1>
+        <button id="start-btn">Start Test</button>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz-screen" class="quiz-section" style="display:none;">
+        <div class="progress-container" style="width: 100%; background: #e2e8f0; border-radius: 8px; height: 10px; margin-bottom: 20px; overflow: hidden;">
+            <div id="progress-bar" style="width: 0%; height: 100%; background: var(--button-bg); transition: width 0.3s ease;"></div>
+        </div>
+        <div class="quiz-header">
+            <h2 id="question-counter">Question 1 / X</h2>
+            <div id="timer-display" class="timer">Time Left: <span id="time">50:00</span></div>
+        </div>
+        
+        <h3 id="question">Loading question...</h3>
+
+        <div id="options" class="options-container"></div>
+
+        <div class="quiz-controls">
+            <button id="check-btn">Check Answer (Enter)</button>
+            <button id="next-btn">Next (🡢)</button>
+            <button id="flag-btn" class="flag-btn">🚩 Flag (F)</button>
+            <button id="stop-btn" class="stop-btn">Submit Test</button>
+        </div>
+
+        <p id="result" class="result"></p>
+        <p id="explanation" class="explanation"></p>
+    </section>
+
+    <!-- Keyboard Guide -->
+    <div id="keyboard-guide" style="display: none; position: fixed; bottom: 20px; right: 20px; background: var(--card-bg); padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 15px var(--shadow); border: 2px solid var(--button-bg); z-index: 1000; font-size: 14px; max-width: 250px;">
+        <h4 style="margin-bottom: 12px; color: var(--button-bg); display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2em;">⌨️</span> Keyboard Shortcuts</h4>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; margin-bottom: 15px; color: var(--text-color); align-items: center;">
+            <kbd style="background: var(--bg-color); border: 1px solid var(--text-color); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; font-weight: bold; text-align: center;">1-4</kbd> <span style="font-size: 13px;">Select Option</span>
+            <kbd style="background: var(--bg-color); border: 1px solid var(--text-color); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; font-weight: bold; text-align: center;">Ent</kbd> <span style="font-size: 13px;">Check / Next</span>
+            <kbd style="background: var(--bg-color); border: 1px solid var(--text-color); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; font-weight: bold; text-align: center;">🡢</kbd> <span style="font-size: 13px;">Next Question</span>
+            <kbd style="background: var(--bg-color); border: 1px solid var(--text-color); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; font-weight: bold; text-align: center;">F</kbd> <span style="font-size: 13px;">Flag Question</span>
+        </div>
+        <button id="iknow-btn" style="width: 100%; margin: 0; padding: 10px; font-size: 14px; background: var(--button-bg); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">I Know, Dismiss</button>
+    </div>
+
+    <!-- Result Screen -->
+    <section id="result-screen" class="quiz-section" style="display:none;">
+        <h2>Practice Result</h2>
+        <div class="score-card">
+            <p id="final-score"></p>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button id="restart-btn">Restart</button>
+            <button id="review-btn" style="background: var(--text-color); color: var(--bg-color); font-weight: bold;">Review Answers</button>
+            <a id="dashboard-btn" href="main_course.html" style="width: 100%; display: block; text-align: center;"><button class="stop-btn" style="margin: 0; width: 100%; max-width: 300px;">Back to Dashboard</button></a>
+        </div>
+    </section>
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+    <script src="l3_quiz.js"></script>
+</body>
+</html>
