@@ -1,0 +1,285 @@
+[
+  {
+    "question": "Which of the following is/are examples of exploratory data analysis?",
+    "options": [
+      "Testing that the average salary in an age group is a specified value",
+      "Searching for trends or outliers in a data set",
+      "Histogram analysis of runs scored by a player in cricket",
+      "Analyzing the relationship between variables using linear regression"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Exploratory data analysis focuses on patterns, distributions, trends, and relationships before formal hypothesis testing."
+  },
+  {
+    "question": "Identify the correct statement/s below.",
+    "options": [
+      "Any deterministic signal can be accurately predicted given sufficient history.",
+      "A stochastic signal always keeps randomly alternating between positive and negative values",
+      "Measurements of steps by the best smart phone of an active individual are deterministic.",
+      "Probability that a batsman in cricket will get out on any ball is 0.5."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "A deterministic signal follows a fixed rule, so past information can predict future values."
+  },
+  {
+    "question": "Which of the following functions is/are linear in time t?",
+    "options": [
+      "A sinusoidal signal y(t)=A sin(ω₀t)",
+      "The signal x(t)=t exp(c₀t)+β when c₀=0",
+      "Distance travelled by a car with uniform velocity",
+      "The instantaneous frequency of a linear chirp x(t)=cos(2π(αt+f₀)t)"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Linear behavior means output changes proportionally with time."
+  },
+  {
+    "question": "An estimator is said to be most efficient when",
+    "options": [
+      "The parameters can be estimated accurately with the smallest sample size.",
+      "It estimates parameters with the lowest variability / highest precision.",
+      "It is able to handle at least 10% of missing data.",
+      "Among all estimators it estimates with lowest standard error."
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "Efficiency means minimum variance or standard error among estimators."
+  },
+  {
+    "question": "Identify the correct statement(s) among the following.",
+    "options": [
+      "Bias in an estimate implies it is different from the true value by exactly a constant.",
+      "A statistic and estimator are both mathematical functions of the observed data.",
+      "Precision and accuracy of an estimator are very closely related to each other.",
+      "Two variables with identical correlation in two different data sets have the same linear model."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Both statistics and estimators are calculated directly from sample data."
+  },
+  {
+    "question": "Identify the correct statement among the following:",
+    "options": [
+      "Data visualization is useful because it gives us an idea of anomalies and trends.",
+      "Robust methods of estimation are meant to handle outliers.",
+      "Errors in estimates of order 10^-3 are always insignificant.",
+      "Input excitation can greatly influence the ability to estimate parameters uniquely."
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Visualization, robustness, and input quality all affect reliable estimation."
+  },
+  {
+    "question": "Which of the following is true concerning a parameter estimate?",
+    "options": [
+      "It can never equal the true value even if data is identical to the ensemble.",
+      "Averaging across many data sets reduces error by five hundred times.",
+      "Increase in sample size will always increase its value.",
+      "The most efficient estimate is not necessarily the most accurate."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "An efficient estimator may still have bias, so accuracy is separate."
+  },
+  {
+    "question": "Which of the following is true with respect to data-driven modelling?",
+    "options": [
+      "Overfitting generally implies more time spent fitting the model.",
+      "Models that are underfit are less complex than overfit models.",
+      "Overfit models generally perform poorly on fresh data sets.",
+      "Overfitting occurs whenever sample size is larger than necessary."
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Overfit models capture noise and fail to generalize."
+  },
+  {
+    "question": "While working with acids in laboratories:",
+    "options": [
+      "Acid storage must be done with secondary containment",
+      "Acids and bases must be separated",
+      "Acid wastes must be washed down the sink",
+      "Acid containing bottles must be clearly labelled"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Safe acid handling requires containment, separation, and labeling."
+  },
+  {
+    "question": "Gas bottles in laboratories should be:",
+    "options": [
+      "Transported by rolling on the floor",
+      "Secured with a chain high enough to prevent toppling",
+      "Stored with regulators removed",
+      "Stored with regulators fixed on the bottles"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Gas cylinders must be secured and regulators removed when stored."
+  },
+  {
+    "question": "An outline of a talk helps the audience",
+    "options": [
+      "Understand your educational background",
+      "Note the main points you will be covering in the talk",
+      "Decide the sections of the talk they are interested in",
+      "Understand the importance of your professional accomplishments"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "An outline helps listeners follow structure and focus areas."
+  },
+  {
+    "question": "The features of a journal paper are:",
+    "options": [
+      "It changes based on the audience",
+      "It is a one-time activity with respect to a given set of data",
+      "It is peer reviewed",
+      "Generally interactive with the reader"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Journal papers are formal, fixed documents reviewed by experts."
+  },
+  {
+    "question": "The features of a technical presentation are:",
+    "options": [
+      "It changes based on the audience",
+      "It is a one-time activity with respect to a given set of data",
+      "It is peer reviewed",
+      "Generally interactive with the audience"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "Presentations are adapted to audience needs and often interactive."
+  },
+  {
+    "question": "Knowing who your audience is important in a technical presentation because:",
+    "options": [
+      "Your audience may have popular people",
+      "You will be able to gauge their background knowledge",
+      "You can tailor your talk accordingly",
+      "You can understand why they are watching your talk"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Audience awareness improves relevance, depth, and delivery."
+  },
+  {
+    "question": "Illustration and data in a presentation",
+    "options": [
+      "Must completely fill the slide from end to end",
+      "Must be presented with sufficient open spaces in between",
+      "Must typically help the audience focus on a specific idea in each slide",
+      "Must always be in colour"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Slides should remain clear, readable, and idea-focused."
+  },
+  {
+    "question": "Steps involved in publishing a journal paper typically include:",
+    "options": [
+      "Writing the paper as per journal constraints",
+      "Submitting the paper to a journal which sends it to reviewers",
+      "Responding to reviewer comments",
+      "Publication if it is less than 7 pages long"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Publication follows writing, review, revision, and acceptance."
+  },
+  {
+    "question": "Any given journal will typically accept for review:",
+    "options": [
+      "Papers in any area of research",
+      "Papers in any area if new",
+      "Papers only from a relatively narrow area of research",
+      "Previously published peer reviewed papers"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Most journals define a limited subject scope."
+  },
+  {
+    "question": "A technical paper and a science fiction novel:",
+    "options": [
+      "Have the same style of presentation",
+      "Have very different styles of presentation",
+      "Both aim to surprise the reader in the end",
+      "Both aim to be thrilling till the end"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Technical writing prioritizes clarity over narrative suspense."
+  },
+  {
+    "question": "Most students typically find their initial technical papers difficult to write because:",
+    "options": [
+      "They are accustomed to poor examples of technical writing",
+      "They have high expectations of the first draft",
+      "They often do not understand why changes are suggested",
+      "They do not understand their work"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Writing improves through revision and understanding conventions."
+  },
+  {
+    "question": "The purpose of technical writing includes",
+    "options": [
+      "Informing the reader",
+      "Persuading the reader to a certain point of view",
+      "Conveying ideas efficiently",
+      "Being sarcastic in the technical document"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Technical writing must be clear, objective, and purposeful."
+  }
+]
