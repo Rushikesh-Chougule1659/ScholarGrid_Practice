@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Variables */
+:root {
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-color: #222;
+    --subtext-color: #555;
+    --nav-bg: #ffffff;
+    --nav-text: #333;
+    --button-bg: #0077ff;
+    --button-hover: #005fd1;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --bg-color: #121826;
+    --card-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --subtext-color: #cbd5e1;
+    --nav-bg: #0f172a;
+    --nav-text: #f1f5f9;
+    --button-bg: #2563eb;
+    --button-hover: #1d4ed8;
+    --shadow: rgba(255, 255, 255, 0.05);
+}
+
+/* Body */
+body {
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    padding-left: 250px;
+}
+
+/* Navbar */
+nav {
+    background: var(--nav-bg);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 30px;
+    box-shadow: 4px 0 15px var(--shadow);
+    z-index: 100;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+    width: 100%;
+    display: block;
+}
+
+nav a:hover {
+    color: var(--button-bg);
+}
+
+/* Sections */
+section {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Paragraph */
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--subtext-color);
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 14px 28px;
+    margin: 12px;
+    border: none;
+    border-radius: 10px;
+    background: var(--button-bg);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,119,255,0.25);
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,119,255,0.3);
+}
+
+/* Toggle Button */
+.theme-toggle {
+    margin-top: auto; /* Pushes to bottom of nav sidebar */
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Category Filters & Course List */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--button-bg);
+    box-shadow: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--button-bg);
+    color: white;
+    transform: none;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    text-align: left;
+    justify-content: center;
+}
+
+.course-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.course-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--subtext-color);
+    flex-grow: 1;
+}
+
+.course-card button {
+    width: 100%;
+    margin: 0;
+}
+
+/* --- Premium UI Enhancements for Pages --- */
+
+/* Subtle gradient overlay */
+body {
+    background-image: radial-gradient(circle at top right, rgba(0, 119, 255, 0.05), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(0, 119, 255, 0.05), transparent 40%);
+}
+.dark-mode body {
+    background-image: radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.1), transparent 40%);
+}
+
+.page-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--button-bg), #8a2be2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--subtext-color);
+}
+
+/* Premium Cards */
+.premium-card {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 30px;
+    background: var(--card-bg);
+    border: 1px solid var(--shadow);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .premium-card {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--button-bg), #8a2be2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 119, 255, 0.15);
+}
+
+.premium-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 119, 255, 0.05);
+    border-radius: 18px;
+    color: var(--button-bg);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .card-icon {
+    background: rgba(37, 99, 235, 0.15);
+}
+
+.premium-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.premium-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.premium-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--subtext-color);
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.badge {
+    background: rgba(0, 119, 255, 0.1);
+    color: var(--button-bg);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.dark-mode .badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--button-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 119, 255, 0.3);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 119, 255, 0.4);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Premium Navigation specifics */
+nav.premium-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--button-bg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+nav.premium-nav .nav-icon {
+    margin-right: 12px;
+    font-size: 1.25rem;
+}
+
+nav.premium-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+}
+
+nav.premium-nav a:hover {
+    background: rgba(0, 119, 255, 0.05);
+}
+
+nav.premium-nav a.active {
+    color: var(--button-bg);
+    background: rgba(0, 119, 255, 0.1);
+}
+
+.dark-mode nav.premium-nav a:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode nav.premium-nav a.active {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+}
+
+/* --- Unified Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+        padding-bottom: 75px;
+    }
+
+    /* Fixed Bottom Nav for Mobile */
+    nav, nav.premium-nav {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 5px;
+        box-shadow: 0 -4px 20px var(--shadow);
+        z-index: 1000;
+        gap: 5px;
+        background: var(--nav-bg);
+    }
+
+    nav .logo, nav.premium-nav .logo {
+        display: none; /* Make room on bottom nav */
+    }
+
+    nav a, nav.premium-nav a {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+
+    nav .nav-icon, nav.premium-nav .nav-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+
+    nav a.active, nav.premium-nav a.active {
+        background: rgba(0, 119, 255, 0.1);
+        margin: 0;
+    }
+
+    .theme-toggle {
+        margin: 0;
+        width: auto;
+        padding: 10px 15px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        color: var(--nav-text);
+        box-shadow: none;
+    }
+    .theme-toggle:hover {
+        background: rgba(0, 119, 255, 0.1);
+        transform: none;
+    }
+
+    /* Core Layout Layout Adjustments */
+    section, .page-content {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* Course Cards */
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .premium-card {
+        padding: 25px 20px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .card-footer .badge {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .course-card button, section button, #start-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Search Component */
+    .search-container {
+        flex-direction: row !important;
+        width: 100% !important;
+    }
+    #course-search {
+        width: 70% !important;
+        font-size: 14px !important;
+        padding: 12px 15px !important;
+    }
+    .search-btn {
+        width: 30% !important;
+        margin: 0 !important;
+        padding: 12px 5px !important;
+        font-size: 14px !important;
+    }
+
+    /* Keyboard Guide floating box */
+    #keyboard-guide {
+        left: 20px !important;
+        right: 20px !important;
+        bottom: 90px !important; /* Stand above mobile bottom-nav */
+        max-width: none !important;
+        width: auto !important;
+    }
+}
+
